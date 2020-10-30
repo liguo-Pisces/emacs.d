@@ -2,6 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
+;; 设置垃圾回收
 (setq gc-cons-threshold 100000000
       gc-cons-percentage 0.5)
 
@@ -9,7 +10,6 @@
 
 ;; 包配置
 (require 'm-package-management)
-
 ;; 外观配置
 (require 'm-appearance)
 ;; 主题配置
@@ -18,33 +18,26 @@
 (require 'm-interface-enhancement)
 ;; 文件管理配置
 (require 'm-file-manager)
+;; 导航配置
 (require 'm-navigation)
+;; 可视区域配置
 (require 'm-visual)
+;; 编辑功能配置
 (require 'm-editing)
-
+;; 项目管理配置
 (require 'm-project-management)
-
+;; 程序功能配置
 (require 'm-programming)
+;; 编程语言配置
+(require 'm-programming-language)
 
-(use-package go-mode
-  :init
-  (autoload 'go-mode "go-mode" nil t)
-  (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode)))
-
-;; (require 'cl)
-(use-package lsp-mode
-  :commands (lsp lsp-deferred)
-  :hook (go-mode . lsp-deferred))
-
-(defun lsp-go-install-save-hooks ()
-  (add-hook 'before-save-hook #'lsp-format-buffer t t)
-  (add-hook 'before-save-hook #'lsp-organize-imports t t))
-(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
-
-(use-package lsp-ui
-  :commands lsp-ui-mode)
-
-;; (require 'init-editing)
+(require 'm-keys-cheat-sheet)
+;; 笔记配置
+(require 'm-note)
+;; 版本控制配置
+(require 'm-version-control)
+;; 一体化配置
+(require 'm-integration)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -52,7 +45,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(doom-modeline pinyinlib counsel-tramp counsel-world-clock gnu-elpa-keyring-update diminish use-package)))
+   '(ivy-xref ivy-yasnippet counsel-projectile ivy-hydra ivy-prescient amx company-prescient doom-modeline pinyinlib counsel-tramp counsel-world-clock gnu-elpa-keyring-update diminish use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
