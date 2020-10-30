@@ -1,5 +1,8 @@
 ;; -*- coding: utf-8; lexical-binding: t; -*-
 
+;; 
+(set-frame-font "JetBrainsMono 10")
+
 ;; 显示时间
 (display-time-mode 1)
 (setq display-time-24hr-format t)
@@ -21,10 +24,9 @@
 
 (use-package all-the-icons)
 
-;; modeline配置
-(use-package doom-modeline
-  :hook
-  (after-init . doom-modeline-mode))
+(use-package powerline
+  :config
+  (powerline-default-theme))
 
 (use-package diminish)
 

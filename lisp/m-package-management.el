@@ -6,12 +6,12 @@
 ;; 			 ("melpa-stable" . "https://stable.melpa.org/packages/")))
 
 (setq package-archives '(("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-                        ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+                        ("elpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
                         ("melpa-stable" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa-stable/")))
 
 ;; (setq package-archives '(("gnu" . "https://mirrors.163.com/elpa/gnu/")
 ;; 			 ("melpa" . "https://mirrors.163.com/elpa/melpa/")
-;; 			 ("melpa-stable" . "https://mirrors.163.com/elpa/melpa-stable/")))
+;; 		 ("melpa-stable" . "https://mirrors.163.com/elpa/melpa-stable/")))
 
 (package-initialize)
 
