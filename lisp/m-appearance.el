@@ -1,7 +1,8 @@
 ;; -*- coding: utf-8; lexical-binding: t; -*-
 
 ;; 
-(set-frame-font "JetBrainsMono 10")
+;(set-frame-font "JetBrainsMono 12")
+(set-frame-font "Monaco 12")
 
 ;; 显示时间
 (display-time-mode 1)
